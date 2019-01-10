@@ -10,6 +10,7 @@
   },
   "plugins": [],
   "dependencies": {
+    "cellsio": "https://github.com/insales-components/cellsio",
     "modal": "https://github.com/insales-components/modal"
   }
 }
