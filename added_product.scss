@@ -1,0 +1,37 @@
+.added_product {
+  width: 600px;
+  display: block;
+}
+
+.added_product-heading {
+  margin-bottom: 1em;
+}
+
+.cart_totals-position {
+  margin-bottom: 1em;
+}
+
+.cart_totals-price {
+  margin-bottom: 1em;
+}
+
+.cart_order {
+  font-size: 0.8em;
+}
+
+.cart_order [class*=btn] {
+  width: 100%;
+}
+
+.added-close {
+  margin-top: 1em;
+}
+
+.cart_variant-title {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.cart_variant-options {
+  font-size: 0.8em;
+}

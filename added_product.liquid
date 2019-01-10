@@ -1,0 +1,72 @@
+<div id="added-product" class="modal-hide added_product-modal">
+  <div class="js-added_product"></div>
+</div>
+
+<script type="text/template" data-template-id="added-product">
+<div class="added_product">
+  <div class="row">
+    <div class="cell-7 hide-s added_product-info cards-col flex-between">
+      <div class="added_product-heading">
+        товар добавлен в корзину
+      </div>
+
+      <div class="added_product-product">
+        <div class="row flex-middle">
+          <div class="cell-5">
+            <div class="cart-modal-image">
+              <span class="image-container cart_variant-image is-square">
+                <span class="image-flex-center">
+                  <img src="<%= variant.first_image.medium_url %>">
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="cell-7">
+            <div class="cart_variant">
+              <div class="cart_variant-title">
+                <%= product.title %>
+              </div>
+
+              <div class="cart_variant-options">
+                <% _.forEach(variant.option_values, function (value){  %>
+                  <% if(value.option_name) { %>
+                  <div class="cart_variant-option">
+                    <%= value.option_name.title %>: <%= value.title %>
+                  </div>
+                  <% } %>
+                <% }) %>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="cell-5 cell-12-s cards-col">
+      <div class="cart_totals">
+        <div class="cart_totals-position">
+          в корзине <span><%= cart.positions_count %></span> <span><%= declinationText(cart.positions_count) %></span>
+        </div>
+        <div class="cart_totals-price">
+          <span>На сумму:</span> <strong><%= Shop.money.format(cart.total_price) %></strong>
+        </div>
+
+      </div>
+
+      <div class="cart_order">
+        <form action="{{ cart_url }}" method="post" data-cart-form class="cart_order-form">
+          <input type="hidden" name="_method" value="put">
+          <input type="hidden" name="make_order" value="">
+          <input type="submit" value="Оформить заказ" data-cart-submit class="bttn-second bttn-cart_order">
+        </form>
+
+        <button class="added-close shoping-go cart-back bttn">
+          Продолжить покупки
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</script>

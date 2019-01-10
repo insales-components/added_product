@@ -1,0 +1,15 @@
+{
+  "name": "added_product",
+  "version": "1.0.0",
+  "description": "Модальное окно добавленного товара",
+  "author": "LiquidHub.ru",
+  "type": "snippets",
+  "homepage": "https://github.com/insales-components/added_product",
+  "props": {
+    "liquid": true
+  },
+  "plugins": [],
+  "dependencies": {
+    "modal": "https://github.com/insales-components/modal"
+  }
+}
